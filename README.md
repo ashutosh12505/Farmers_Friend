@@ -1,61 +1,156 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌾 Farmer’s Friend
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Coming%20Soon-00C7B7?style=for-the-badge&logo=laravel&logoColor=white)](#)
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Laravel-12.0-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-4.0-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-6.2.4-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenWeatherMap-API-FFA500?style=for-the-badge&logo=openweathermap&logoColor=white" />
+  <img src="https://img.shields.io/badge/WeatherAPI.com-Integration-1E90FF?style=for-the-badge" />
 </p>
 
-## About Laravel
+A comprehensive **agriculture support system** built with **Laravel** and **Tailwind CSS**, empowering farmers with **real-time weather insights**, **crop recommendations**, **pest alerts**, and **market trends** — all in one intelligent web platform.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📘 Project Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Farmer’s Friend** is a web platform designed to assist farmers in making informed agricultural decisions.  
+It integrates **real-time weather data**, **AI-powered crop recommendations**, **pest alerts**, **farming precautions**, and **market price analytics**, enabling smarter and more sustainable farming.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ✨ Core Features
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- 🌦️ **Weather Prediction** — Real-time conditions and 5-day forecasts via OpenWeatherMap API  
+- 🌱 **Crop Suggestions** — Smart crop recommendations based on temperature, humidity, and region  
+- 🐛 **Pest Alerts** — Disease and pest warnings for 20 major crops with prevention tips  
+- ⚠️ **Weather Warnings** — Alerts with severity, urgency, and safety recommendations  
+- 💡 **Farming Precautions** — Actionable, weather-based advice for better yield  
+- 💰 **Market Prices** — Historical crop prices (2015–2024) for smarter selling decisions  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🏗️ Technical Architecture
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Layer | Technology |
+|--------|-------------|
+| **Backend Framework** | Laravel 12.0 (PHP 8.2+) |
+| **Frontend** | Blade Templates + Tailwind CSS 4.0 |
+| **Build Tool** | Vite 6.2.4 |
+| **Database** | SQLite (default), MySQL/PostgreSQL supported |
+| **APIs Integrated** | OpenWeatherMap, WeatherAPI.com, Data.gov |
+| **Data Handling** | PHPSpreadsheet (CSV/Excel) |
+| **Development Tools** | Laravel Sail, Pint, Pest PHP |
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+## 🧩 Project Structure
+```
+Farmer's Friend/
+│
+├── app/
+│ ├── Console/Commands/
+│ ├── Http/Controllers/ # Weather, Crop, Pest, and Market modules
+│ ├── Models/
+│ ├── Services/ # Business logic and API integrations
+│ └── Providers/
+│
+├── config/ # App configuration files
+│
+├── database/
+│ ├── migrations/ # Tables: users, jobs, crops
+│ ├── seeders/
+│ └── database.sqlite
+│
+├── resources/
+│ ├── views/ # Blade templates (home, crop, alerts, etc.)
+│ ├── css/
+│ └── js/
+│
+├── routes/
+│ └── web.php # Web routes
+│
+├── public/
+│ └── crop_price.csv # Market price dataset
+│
+├── screenshots/ # Project screenshots
+└── vite.config.js
+```
+---
 
-## Contributing
+## 🌐 Integrated APIs
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| API | Purpose |
+|------|----------|
+| **OpenWeatherMap** | Real-time weather and forecasts |
+| **WeatherAPI.com** | Severe weather alerts and warnings |
+| **Data.gov** | Government agricultural datasets |
+| **PHPSpreadsheet** | Crop price data (CSV/Excel) |
 
-## Code of Conduct
+---
+## 🖼️ Screenshots
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<details>
+<summary>Click to view screenshots</summary>
+<br>
 
-## Security Vulnerabilities
+### Dashboard
+![Dashboard](screenshots/screenshot_1.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Weather Prediction
+![Weather Prediction](screenshots/screenshot_2.png)
 
-## License
+### Weather Warnings
+![Weather Warnings](screenshots/screenshot_3.png)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Crop Suggestions
+![Crop Suggestions](screenshots/screenshot_4.png)
+
+### Pest Alerts
+![Pest Alerts](screenshots/screenshot_5.png)
+
+### Farming Precautions
+![Farming Precautions](screenshots/screenshot_6.png)
+</details>
+
+---
+
+## ⚙️ Technical Highlights
+
+- 🧠 RESTful API design with Laravel 12  
+- 🌩️ Real-time weather integration from multiple sources  
+- 🧩 Modular architecture (Service-oriented)  
+- 🔒 Scalable, maintainable, and well-structured codebase  
+- 🎨 Modern responsive design with Tailwind CSS  
+- 🧾 Clean, validated, and formatted PHP code via Laravel Pint  
+
+---
+
+## 🚧 Future Enhancements
+
+- 🔐 User authentication and personalized dashboards  
+- 📬 Email/SMS alerts for weather warnings  
+- 🤖 Machine learning for adaptive crop prediction  
+- 🌎 Multi-language and region support  
+- 📱 Mobile app version (React Native/Flutter)  
+- 🌾 Marketplace & community forum for farmers  
+- 🌤️ IoT-based smart sensor integration  
+- 🧮 Advanced analytics, fertilizer, and irrigation scheduling  
+
+---
+
+## 👨‍💻 Author
+
+**Ashutosh Kumar Singh**  
+- 🌐 [Portfolio](https://ashutosh-12505.vercel.app/)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/ashutosh12505/)  
+- 💻 [GitHub](https://github.com/ashutosh12505)
+
+---
+
+<p align="center">
+  <i>“Empowering farmers with data-driven insights for a sustainable tomorrow.”</i>
+</p>
